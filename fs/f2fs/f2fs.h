@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-2.0
+fv// SPDX-License-Identifier: GPL-2.0
 /*
  * fs/f2fs/f2fs.h
  *
@@ -295,6 +295,7 @@ struct cp_control {
 	__u64 trim_start;
 	__u64 trim_end;
 	__u64 trim_minlen;
+	__u64 trimmed;
 };
 
 /*
