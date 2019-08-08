@@ -1,0 +1,9 @@
+Compile kernel;
+Unpack boot.img ( from already compiled kernel, example LineageOS ), using /build/aik/unpackimg.sh;
+Rename /arch/arm64/boot/Image to boot-img.zImage and place it /build/aik/split-img/boot-img.zImage;
+For G930 : echo SRPOI17A003KU >> /split-img/boot-img.board;
+For G935 : echo SRPOI30A003KU >> /split-img/boot-img.board;
+Repack using /build/aik/repackimg.sh;
+echo SEANDROIDENFORCE >> image-new.img;
+Flash with TWRP;
+
